@@ -39,7 +39,9 @@ class PluginIndexer(object):
 
         description_indexer.set_document(doc)
         nonstemmed_indexer.set_document(doc)
-        nonstemmed_indexer.index_text(description)
+        
+        nonstemmed_indexer.index_text(name)
+        description_indexer.index_text(description)
         # weight the name
         doc.add_term(name, 10)
 
